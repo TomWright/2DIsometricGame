@@ -1,5 +1,7 @@
 package me.tomwright.game.entity;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.Sprite;
@@ -21,8 +23,6 @@ public class Player extends Sprite {
     private float gravity;
 
     private TiledMapTileLayer groundLayer, collisionLayer;
-
-    private int testMoveDir = 0;
 
     public Player(Sprite sprite, TiledMapTileLayer groundLayer) {
         super(sprite);
@@ -122,27 +122,12 @@ public class Player extends Sprite {
     private void handleMovementVelocity(float delta) {
         float deltaSpeed = speed * delta;
 
+        boolean movingRightKeyPressed = (Gdx.input.isKeyPressed(Input.Keys.D) || Gdx.input.isKeyPressed(Input.Keys.RIGHT)),
+                movingLeftKeyPressed = (Gdx.input.isKeyPressed(Input.Keys.A) || Gdx.input.isKeyPressed(Input.Keys.LEFT)),
+                movingUpKeyPressed = (Gdx.input.isKeyPressed(Input.Keys.W) || Gdx.input.isKeyPressed(Input.Keys.UP)),
+                movingDownKeyPressed = (Gdx.input.isKeyPressed(Input.Keys.S) || Gdx.input.isKeyPressed(Input.Keys.DOWN));
+
         // Ensure X velocity is correct
-        boolean movingRightKeyPressed = false,
-                movingLeftKeyPressed = false,
-                movingUpKeyPressed = false,
-                movingDownKeyPressed = false;
-
-        if (testMoveDir == 0 && position.x <= 0) {
-            testMoveDir = 1;
-        } else if (testMoveDir == 1 && position.x >= 250) {
-            testMoveDir = 2;
-        } else if (testMoveDir == 2 && position.x <= 0) {
-            testMoveDir = 1;
-            position.y += 50;
-        }
-        if (testMoveDir == 1) {
-            movingRightKeyPressed = true;
-        }
-        if (testMoveDir == 2) {
-            movingLeftKeyPressed = true;
-        }
-
         if (movingRightKeyPressed) {
             velocity.x = deltaSpeed;
         } else if (movingLeftKeyPressed) {
