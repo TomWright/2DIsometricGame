@@ -1,6 +1,6 @@
 package me.tomwright.game.map;
 
-import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.maps.MapProperties;
 import com.badlogic.gdx.maps.tiled.TiledMapTile;
 import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
 import com.badlogic.gdx.math.Vector2;
@@ -9,12 +9,27 @@ import me.tomwright.game.TomsGame;
 
 public class MapHelper {
 
+    public static float getGroundLevelAtTile(TiledMapTile tile) {
+        float result = 0;
+
+        MapProperties properties = null;
+        if (tile != null) {
+            properties = tile.getProperties();
+            if (properties != null && properties.containsKey("ground_level")) {
+                Object groundLevel = properties.get("ground_level");
+                result = (Float.parseFloat((String) groundLevel));
+            }
+        }
+
+        return result;
+    }
+
     public static int getXTile (Vector3 position) {
         return getXTile(position.x);
     }
 
     public static int getXTile (float x) {
-        return (int) (x / TomsGame.TILE_WIDTH);
+        return (int) Math.floor(x / TomsGame.TILE_WIDTH);
     }
 
     public static int getYTile (Vector3 position) {
@@ -22,12 +37,13 @@ public class MapHelper {
     }
 
     public static int getYTile (float y) {
-        return (int) (y / TomsGame.TILE_HEIGHT);
+        return (int) Math.floor(y / TomsGame.TILE_HEIGHT);
     }
 
     public static TiledMapTile getTileAt (float x, float y, TiledMapTileLayer layer) {
         int xTile = getXTile(x);
         int yTile = getYTile(y);
+
         TiledMapTileLayer.Cell cell = layer.getCell(xTile, yTile);
         if (cell == null) {
             return null;
@@ -72,6 +88,24 @@ public class MapHelper {
 
     public static Vector2 positionToIsoXY (Vector2 position) {
         return positionToIsoXY(position.x, position.y);
+    }
+
+    public static Vector3[] positionToTileXY (float x, float y, float z) {
+        Vector3 bottomLeftPos = new Vector3(x - (x % 100), y - (y % 100), z),
+                topLeftPos = new Vector3(bottomLeftPos.x, bottomLeftPos.y + 100, z),
+                bottomRightPos = new Vector3(bottomLeftPos.x + 100, bottomLeftPos.y, z),
+                topRightPos = new Vector3(bottomRightPos.x, topLeftPos.y, z);
+        return new Vector3[] {bottomLeftPos, topLeftPos, topRightPos, bottomRightPos};
+    }
+
+    public static Vector2[] positionToIsoTileXY(float x, float y, float z) {
+        Vector3[] coords = positionToTileXY(x, y, z);
+        return new Vector2[] {
+                MapHelper.positionToIsoXY(coords[0]),
+                MapHelper.positionToIsoXY(coords[1]),
+                MapHelper.positionToIsoXY(coords[2]),
+                MapHelper.positionToIsoXY(coords[3])
+        };
     }
 
 }

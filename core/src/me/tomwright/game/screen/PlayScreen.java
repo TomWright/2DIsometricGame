@@ -1,16 +1,20 @@
 package me.tomwright.game.screen;
 
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.maps.tiled.renderers.IsometricTiledMapRenderer;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
+import me.tomwright.game.TomsGame;
 import me.tomwright.game.entity.Player;
+import me.tomwright.game.map.MapHelper;
 
 public class PlayScreen extends Screen {
 
@@ -32,7 +36,7 @@ public class PlayScreen extends Screen {
         float unitScale = 1f;
         renderer = new IsometricTiledMapRenderer(map, unitScale);
 
-        player = new Player(new Sprite(new Texture("img/player.png")), (TiledMapTileLayer) map.getLayers().get(0));
+        player = new Player((TiledMapTileLayer) map.getLayers().get(0));
     }
 
     @Override
