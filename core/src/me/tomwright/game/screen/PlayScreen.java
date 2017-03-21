@@ -8,6 +8,8 @@ import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.maps.tiled.renderers.IsometricTiledMapRenderer;
+import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.math.Vector3;
 import me.tomwright.game.entity.Player;
 
 public class PlayScreen extends Screen {
@@ -36,28 +38,22 @@ public class PlayScreen extends Screen {
     @Override
     public void update(float deltaTime) {
         player.update(deltaTime);
+
+        float lerp = 2f;
+        Vector3 position = camera.position;
+        Vector2 renderPos = player.getRenderPos();
+
+        position.x += (renderPos.x - position.x) * lerp * deltaTime;
+        position.y += (renderPos.y - position.y + 40) * lerp * deltaTime;
+
+        camera.update();
     }
 
     @Override
-    public void render() {
+    public void render(float deltaTime) {
         renderer.setView(camera);
         // You can pass  int[] to determine which layers to render.
         renderer.render();
-
-//        tick++;
-//        if (tick > 400) {
-//            tick = 0;
-//        }
-//        if (tick <= 100) {
-//            camera.position.x++;
-//        } else if (tick <= 200) {
-//            camera.position.y--;
-//        } else if (tick <= 300) {
-//            camera.position.x--;
-//        } else if (tick <= 400) {
-//            camera.position.y++;
-//        }
-//        camera.update();
 
         Batch batch = renderer.getBatch();
 

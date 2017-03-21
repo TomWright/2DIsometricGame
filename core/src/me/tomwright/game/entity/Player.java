@@ -18,6 +18,8 @@ public class Player extends Sprite {
 
     private Vector3 position;
 
+    private Vector2 renderPos;
+
     private float speed;
 
     private float gravity;
@@ -29,7 +31,8 @@ public class Player extends Sprite {
 
         velocity = new Vector3(0, 0, 0);
         position = new Vector3(0, 0, 100);
-        speed = 60 * 2f;
+        renderPos = new Vector2(0, 0);
+        speed = 60 * 3f;
         gravity = 60 * 1f;
 
         this.groundLayer = groundLayer;
@@ -87,7 +90,7 @@ public class Player extends Sprite {
 
             if (currentTileProperties.containsKey("ground_level")) {
                 Object groundLevel = currentTileProperties.get("ground_level");
-                float ground = (Float) groundLevel;
+                float ground = (Float.parseFloat((String) groundLevel));
                 if (newPosition.z < ground) {
                     newPosition.z = ground;
                 }
@@ -111,8 +114,8 @@ public class Player extends Sprite {
         setX(renderPos.x);
         setY(renderPos.y);
 
-        camera.position.set(renderPos, 0);
-        camera.update();
+        this.renderPos.x = renderPos.x;
+        this.renderPos.y = renderPos.y;// - this.position.z;
     }
 
     /**
@@ -194,5 +197,9 @@ public class Player extends Sprite {
 
     public void dispose() {
         getTexture().dispose();
+    }
+
+    public Vector2 getRenderPos() {
+        return renderPos;
     }
 }

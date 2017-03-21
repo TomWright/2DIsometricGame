@@ -33,13 +33,14 @@ public class TomsGame extends ApplicationAdapter {
 
 	@Override
 	public void render () {
-		update(Gdx.graphics.getDeltaTime());
+		float deltaTime = Gdx.graphics.getDeltaTime();
+		update(deltaTime);
 
 		Gdx.gl.glClearColor(0, 0, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
 		if (ScreenManager.hasCurrentScreen()) {
-			ScreenManager.getCurrentScreen().render();
+			ScreenManager.getCurrentScreen().render(deltaTime);
 		}
 	}
 	

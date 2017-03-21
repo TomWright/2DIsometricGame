@@ -56,6 +56,9 @@ public class MapHelper {
 
         renderPos.y += z;
 
+        renderPos.x = (float) Math.floor(renderPos.x);
+        renderPos.y = (float) Math.floor(renderPos.y);
+
         return renderPos;
     }
 
