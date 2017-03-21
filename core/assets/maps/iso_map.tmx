@@ -3,296 +3,578 @@
  <tileset firstgid="1" name="road" tilewidth="100" tileheight="80" tilecount="96" columns="0">
   <tile id="0">
    <properties>
-    <property name="ground_level" type="float" value="40"/>
+    <property name="ground_level" value="40.0"/>
    </properties>
    <image width="100" height="65" source="../beach.png"/>
   </tile>
   <tile id="1">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="58" source="../beachCornerES.png"/>
   </tile>
   <tile id="2">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../beachCornerNE.png"/>
   </tile>
   <tile id="3">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="58" source="../beachCornerNW.png"/>
   </tile>
   <tile id="4">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="58" source="../beachCornerSW.png"/>
   </tile>
   <tile id="5">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../beachE.png"/>
   </tile>
   <tile id="6">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../beachES.png"/>
   </tile>
   <tile id="7">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../beachN.png"/>
   </tile>
   <tile id="8">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="58" source="../beachNE.png"/>
   </tile>
   <tile id="9">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../beachNW.png"/>
   </tile>
   <tile id="10">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="58" source="../beachS.png"/>
   </tile>
   <tile id="11">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../beachSW.png"/>
   </tile>
   <tile id="12">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="58" source="../beachW.png"/>
   </tile>
   <tile id="13">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="62" source="../bridgeEW.png"/>
   </tile>
   <tile id="14">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="62" source="../bridgeNS.png"/>
   </tile>
   <tile id="15">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="14" height="36" source="../coniferAltShort.png"/>
   </tile>
   <tile id="16">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="19" height="48" source="../coniferAltTall.png"/>
   </tile>
   <tile id="17">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="14" height="36" source="../coniferShort.png"/>
   </tile>
   <tile id="18">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="19" height="48" source="../coniferTall.png"/>
   </tile>
   <tile id="19">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../crossroad.png"/>
   </tile>
   <tile id="20">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../crossroadESW.png"/>
   </tile>
   <tile id="21">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../crossroadNES.png"/>
   </tile>
   <tile id="22">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../crossroadNEW.png"/>
   </tile>
   <tile id="23">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../crossroadNSW.png"/>
   </tile>
   <tile id="24">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="58" source="../dirt.png"/>
   </tile>
   <tile id="25">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../dirtDouble.png"/>
   </tile>
   <tile id="26">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../endE.png"/>
   </tile>
   <tile id="27">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../endN.png"/>
   </tile>
   <tile id="28">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../endS.png"/>
   </tile>
   <tile id="29">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../endW.png"/>
   </tile>
   <tile id="30">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../exitE.png"/>
   </tile>
   <tile id="31">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../exitN.png"/>
   </tile>
   <tile id="32">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../exitS.png"/>
   </tile>
   <tile id="33">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../exitW.png"/>
   </tile>
   <tile id="34">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../grass.png"/>
   </tile>
   <tile id="35">
    <properties>
-    <property name="ground_level" type="float" value="40"/>
+    <property name="ground_level" value="40.0"/>
    </properties>
    <image width="100" height="65" source="../grassWhole.png"/>
   </tile>
   <tile id="36">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../hillE.png"/>
   </tile>
   <tile id="37">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../hillES.png"/>
   </tile>
   <tile id="38">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../hillN.png"/>
   </tile>
   <tile id="39">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../hillNE.png"/>
   </tile>
   <tile id="40">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../hillNW.png"/>
   </tile>
   <tile id="41">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="80" source="../hillS.png"/>
   </tile>
   <tile id="42">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="80" source="../hillSW.png"/>
   </tile>
   <tile id="43">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="80" source="../hillW.png"/>
   </tile>
   <tile id="44">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../lotE.png"/>
   </tile>
   <tile id="45">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../lotES.png"/>
   </tile>
   <tile id="46">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../lotN.png"/>
   </tile>
   <tile id="47">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../lotNE.png"/>
   </tile>
   <tile id="48">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../lotNW.png"/>
   </tile>
   <tile id="49">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../lotS.png"/>
   </tile>
   <tile id="50">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../lotSW.png"/>
   </tile>
   <tile id="51">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../lotW.png"/>
   </tile>
   <tile id="52">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../riverBankedES.png"/>
   </tile>
   <tile id="53">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../riverBankedEW.png"/>
   </tile>
   <tile id="54">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../riverBankedNE.png"/>
   </tile>
   <tile id="55">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../riverBankedNS.png"/>
   </tile>
   <tile id="56">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../riverBankedNW.png"/>
   </tile>
   <tile id="57">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../riverBankedSW.png"/>
   </tile>
   <tile id="58">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../riverES.png"/>
   </tile>
   <tile id="59">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../riverEW.png"/>
   </tile>
   <tile id="60">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../riverNE.png"/>
   </tile>
   <tile id="61">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../riverNS.png"/>
   </tile>
   <tile id="62">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../riverNW.png"/>
   </tile>
   <tile id="63">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../riverSW.png"/>
   </tile>
   <tile id="64">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../road.png"/>
   </tile>
   <tile id="65">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../roadES.png"/>
   </tile>
   <tile id="66">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../roadEW.png"/>
   </tile>
   <tile id="67">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../roadHill2E.png"/>
   </tile>
   <tile id="68">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../roadHill2N.png"/>
   </tile>
   <tile id="69">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="77" source="../roadHill2S.png"/>
   </tile>
   <tile id="70">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="77" source="../roadHill2W.png"/>
   </tile>
   <tile id="71">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../roadHillE.png"/>
   </tile>
   <tile id="72">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../roadHillN.png"/>
   </tile>
   <tile id="73">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="80" source="../roadHillS.png"/>
   </tile>
   <tile id="74">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="80" source="../roadHillW.png"/>
   </tile>
   <tile id="75">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../roadNE.png"/>
   </tile>
   <tile id="76">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../roadNS.png"/>
   </tile>
   <tile id="77">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../roadNW.png"/>
   </tile>
   <tile id="78">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../roadSW.png"/>
   </tile>
   <tile id="79">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="11" height="32" source="../treeAltShort.png"/>
   </tile>
   <tile id="80">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="11" height="41" source="../treeAltTall.png"/>
   </tile>
   <tile id="81">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="11" height="32" source="../treeShort.png"/>
   </tile>
   <tile id="82">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="12" height="41" source="../treeTall.png"/>
   </tile>
   <tile id="83">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="58" source="../water.png"/>
   </tile>
   <tile id="84">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="58" source="../waterCornerES.png"/>
   </tile>
   <tile id="85">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../waterCornerNE.png"/>
   </tile>
   <tile id="86">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="58" source="../waterCornerNW.png"/>
   </tile>
   <tile id="87">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="58" source="../waterCornerSW.png"/>
   </tile>
   <tile id="88">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../waterE.png"/>
   </tile>
   <tile id="89">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../waterES.png"/>
   </tile>
   <tile id="90">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../waterN.png"/>
   </tile>
   <tile id="91">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../waterNE.png"/>
   </tile>
   <tile id="92">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="65" source="../waterNW.png"/>
   </tile>
   <tile id="93">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="58" source="../waterS.png"/>
   </tile>
   <tile id="94">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="58" source="../waterSW.png"/>
   </tile>
   <tile id="95">
+   <properties>
+    <property name="ground_level" value="40.0"/>
+   </properties>
    <image width="100" height="58" source="../waterW.png"/>
   </tile>
  </tileset>
