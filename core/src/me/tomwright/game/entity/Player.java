@@ -26,6 +26,8 @@ public class Player extends Sprite {
 
     private TiledMapTileLayer groundLayer, collisionLayer;
 
+    private boolean isJumping;
+
     public Player(Sprite sprite, TiledMapTileLayer groundLayer) {
         super(sprite);
 
@@ -34,6 +36,8 @@ public class Player extends Sprite {
         renderPos = new Vector2(0, 0);
         speed = 60 * 3f;
         gravity = 60 * 1f;
+
+        isJumping = false;
 
         this.groundLayer = groundLayer;
         this.collisionLayer = collisionLayer;
@@ -88,12 +92,16 @@ public class Player extends Sprite {
             // Falling
             newPosition.z += velocity.z;
 
+            float ground = 0;
+
             if (currentTileProperties.containsKey("ground_level")) {
                 Object groundLevel = currentTileProperties.get("ground_level");
-                float ground = (Float.parseFloat((String) groundLevel));
-                if (newPosition.z < ground) {
-                    newPosition.z = ground;
-                }
+                ground = (Float.parseFloat((String) groundLevel));
+            }
+
+            if (newPosition.z < ground) {
+                isJumping = false;
+                newPosition.z = ground;
             }
         }
         if (newPosition.z < 0) {
@@ -128,7 +136,8 @@ public class Player extends Sprite {
         boolean movingRightKeyPressed = (Gdx.input.isKeyPressed(Input.Keys.D) || Gdx.input.isKeyPressed(Input.Keys.RIGHT)),
                 movingLeftKeyPressed = (Gdx.input.isKeyPressed(Input.Keys.A) || Gdx.input.isKeyPressed(Input.Keys.LEFT)),
                 movingUpKeyPressed = (Gdx.input.isKeyPressed(Input.Keys.W) || Gdx.input.isKeyPressed(Input.Keys.UP)),
-                movingDownKeyPressed = (Gdx.input.isKeyPressed(Input.Keys.S) || Gdx.input.isKeyPressed(Input.Keys.DOWN));
+                movingDownKeyPressed = (Gdx.input.isKeyPressed(Input.Keys.S) || Gdx.input.isKeyPressed(Input.Keys.DOWN)),
+                jumpingKeyPressed = (Gdx.input.isKeyPressed(Input.Keys.SPACE));
 
         // Ensure X velocity is correct
         if (movingRightKeyPressed) {
@@ -176,6 +185,11 @@ public class Player extends Sprite {
             velocity.y = speed;
         } else if (0 - velocity.y < -speed) {
             velocity.y = -speed;
+        }
+
+        if (jumpingKeyPressed && ! isJumping) {
+            isJumping = true;
+            velocity.z = 13f;
         }
     }
 
