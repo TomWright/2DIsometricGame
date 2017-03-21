@@ -55,8 +55,6 @@ public class Player extends Sprite {
         velocity = new Vector3(0, 0, 0);
         position = new Vector3(0, 0, 100);
         renderPos = new Vector2(0, 0);
-        speed = 60 * 3f;
-        gravity = 60 * 1f;
 
         isJumping = false;
 
@@ -84,6 +82,12 @@ public class Player extends Sprite {
 
     private void updatePosition(float delta) {
         handleGravity(delta);
+
+        speed = 60 * 3f;
+        gravity = 60 * 1f;
+        if (Gdx.input.isKeyPressed(Input.Keys.SHIFT_LEFT)) {
+            speed = 60 * 10f;
+        }
 
         handleMovementVelocity(delta);
 
